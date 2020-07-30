@@ -12,3 +12,8 @@ mutate(yearly, proportion_deaths = (deaths/births));
 # Print out yearly
 yearly
 
+# Setting the size of plots in this notebook
+options(repr.plot.width=7, repr.plot.height=4)
+
+# Plot yearly proportion of deaths at the two clinics
+ggplot(yearly, aes(x=year,y="proportion_deaths",color=clinic)) + geom_point()
